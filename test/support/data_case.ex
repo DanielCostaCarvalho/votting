@@ -16,6 +16,8 @@ defmodule Votting.DataCase do
 
   use ExUnit.CaseTemplate
 
+  alias Ecto.{Changeset, Ecto.Adapters.SQL.Sandbox}
+
   using do
     quote do
       alias Votting.Repo
@@ -28,10 +30,10 @@ defmodule Votting.DataCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Votting.Repo)
+    :ok = Sandbox.checkout(Votting.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Votting.Repo, {:shared, self()})
+      Sandbox.mode(Votting.Repo, {:shared, self()})
     end
 
     :ok
