@@ -16,7 +16,7 @@ defmodule Votting.DataCase do
 
   use ExUnit.CaseTemplate
 
-  alias Ecto.{Changeset, Ecto.Adapters.SQL.Sandbox}
+  alias Ecto.Adapters.SQL.Sandbox
 
   using do
     quote do
