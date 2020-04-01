@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/DanielCostaCarvalho/votting/tree/master.svg?style=svg)](https://circleci.com/gh/DanielCostaCarvalho/votting/tree/master)
 # Votting
 
 To start your Phoenix server:
